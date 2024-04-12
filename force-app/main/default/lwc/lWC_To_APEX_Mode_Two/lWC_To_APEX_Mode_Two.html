@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Fetch Data from Apex to LWC wire function" icon-name="custom:custom35">
+
+        <template if:true={accounts}>
+            
+            <template for:each={accounts} for:item="acc">
+                <p key={acc.Id}>{acc.Name}</p>
+            </template>
+            
+        </template>
+
+        <template if:true={error}>
+            {error}
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Welcome To SRS Logistics...." icon-name="standard:app">
+
+        <div>
+            <lightning-input label="Enter your Name" value={letter} onchange={letterhandler}></lightning-input>
+        </div>
+        <br> <br>
+
+        <p>Hello, {fullName}!</p>
+        <br>
+        <lightning-button variant="brand" label="Change Name" onclick={changeNameHandler}></lightning-button>
+    </lightning-card>
+</template>

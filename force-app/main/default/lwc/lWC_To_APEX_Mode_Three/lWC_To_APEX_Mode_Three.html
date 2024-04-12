@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Fetch Data from Apex (Mode3) -- Imperative call" icon-name="custom:custom36">
+
+        <div>
+          <lightning-button label="Get Account" onclick={handledButton}></lightning-button>
+        </div>
+        <template if:true={accounts}>
+            
+            <template for:each={accounts} for:item="acc">
+                <p key={acc.Id}>{acc.Name}</p>
+            </template>
+            
+        </template>
+
+        <template if:true={error}>
+            {error}
+        </template>
+    </lightning-card>
+</template>

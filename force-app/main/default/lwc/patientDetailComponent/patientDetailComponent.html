@@ -1,0 +1,18 @@
+<template>
+    
+    <lightning-card title="PATIENT INFO DETAILS : " icon-name="custom:custom56"></lightning-card>
+
+    <template if:true={showFlagvalue}>
+        <lightning-input type="text" label="Enter FirstName of patient"></lightning-input>
+        <lightning-input type="text" label="Enter LastName of patient"></lightning-input>
+        <lightning-input type="text" label="Enter Mobile no of patient"></lightning-input>
+        <lightning-input type="text" label="Enter Email Id of patient"></lightning-input>
+        <lightning-input type="text" label="Enter City of patient"></lightning-input>
+
+        <lightning-button label="Hide Form" onclick={hideform}></lightning-button>
+    </template>
+
+    <template if:false={showFlagvalue}>
+        <lightning-button label="Show Form" onclick={showform}></lightning-button>
+    </template>
+</template>
